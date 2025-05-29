@@ -28,3 +28,7 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## 🔗 Demo
+
+[Открыть демо →](https://logic-composer-7kjc.vercel.app/)
