@@ -15,7 +15,7 @@ import { GroupAccordion } from "../rule-group/group-accordion";
 import { SortableRuleNodes } from "../sortable-rule-nodes/sortable-rule-nodes";
 import { applyLockedRecursively } from "../../lib/apply-locked-recursively";
 import type { TRuleGroup, TRuleNode } from "../../model/types";
-import { initNewGroup, initRuleFilter } from "../../model/data";
+import { generateFilter, generateGroup } from "../../model/data";
 
 export const RuleGroup = ({
   groupData,
@@ -31,11 +31,11 @@ export const RuleGroup = ({
   const { combinator, disabled, locked, collapsed } = groupData;
 
   const handleAddFilter = () => {
-    onChange({ ...groupData, children: [...groupData.children, initRuleFilter] });
+    onChange({ ...groupData, children: [...groupData.children, generateFilter()] });
   };
 
   const handleAddGroup = () => {
-    onChange({ ...groupData, children: [...groupData.children, initNewGroup] });
+    onChange({ ...groupData, children: [...groupData.children, generateGroup()] });
   };
 
   const handleGroupLockedToggle = (locked: TRuleGroup["locked"]) => {

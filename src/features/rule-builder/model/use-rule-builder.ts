@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 import type { TRuleGroup } from "./types";
-import { initialData } from "./data";
+import { generateGroup } from "./data";
 
 export const useRuleBuilder = () => {
-  const [data, setData] = useState<TRuleGroup>(() => initialData);
+  const [data, setData] = useState<TRuleGroup>(() => generateGroup());
 
   return { data, setData };
 };

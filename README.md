@@ -12,18 +12,19 @@
 ## 📦 Установка
 
 ```bash
-git clone https://github.com/your-username/rule-builder.git
+git clone hgit@github.com:RomaSushevskij/logic-composer.git
 cd rule-builder
 npm install
 ```
 
 ## 🧪 Запуск проекта
+
 ```bash
 npm run dev
 ```
+
 🏗️ Сборка
+
 ```bash
 npm run build
 ```
-
-
