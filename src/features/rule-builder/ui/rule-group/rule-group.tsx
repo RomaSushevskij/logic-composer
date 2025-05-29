@@ -101,7 +101,7 @@ export const RuleGroup = ({
       onChange={(_, expanded) => onChange({ ...groupData, collapsed: !expanded })}
     >
       <Stack>
-        <Stack flexDirection={"row"} columnGap={3} alignItems={"center"} marginBlockEnd={1}>
+        <Stack flexDirection={"row"} columnGap={4} alignItems={"center"} marginBlockEnd={2}>
           <GroupDisableBtn
             groupDisabled={disabled}
             onClick={() => onChange({ ...groupData, disabled: !disabled })}
@@ -114,20 +114,20 @@ export const RuleGroup = ({
               <DeleteRuleNodeBtn
                 onClick={onDelete}
                 confirmMessage={"Are you sure you want to remove the group?"}
-                disabled={locked}
+                disabled={disabled}
               />
             </Box>
           )}
         </Stack>
 
-        <Stack flexDirection={"row"} minHeight={40}>
+        <Stack flexDirection={"row"} minHeight={20}>
           <Stack flexDirection={"row"} position={"relative"} width={72} justifyContent={"center"}>
             <RuleGroupBracket combinator={combinator} groupLocked={locked} />
             <Box alignSelf={"center"} position={"absolute"} right={14} sx={{ background: "#fff" }}>
               <RuleCombinatorSwitch
                 combinator={combinator}
                 onChange={(combinator) => onChange({ ...groupData, combinator })}
-                disabled={locked}
+                disabled={disabled}
               />
             </Box>
           </Stack>

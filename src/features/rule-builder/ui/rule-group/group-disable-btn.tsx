@@ -24,7 +24,7 @@ export const GroupDisableBtn = ({
 
   if (groupDisabled) {
     return (
-      <Badge badgeContent={"Draft"} color={"warning"}>
+      <Badge badgeContent={"Disabled"} color={"warning"}>
         {button}
       </Badge>
     );
